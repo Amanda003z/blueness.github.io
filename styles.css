@@ -1,0 +1,276 @@
+body, div, a, h1, h2, h3, label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --dark-blue: #142157;
+    --medium-blue: #107acc;
+    --light-blue: #def7ff;
+
+    background-image: url(images/fondo.webp);
+    background-color: var(--light-blue);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+
+    font-family: Georgia; 
+}
+
+.general_wrapper {
+    position: relative;
+    margin: auto;
+    max-width: 700px;
+}
+
+/* --------------->>> QUOTES SECTION <<<--------------- */
+
+.aside_quotes {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 55dvw;
+    max-width: 400px;
+}
+
+.aside_quotes > label {
+    user-select: none;
+    margin-left: 10px;
+    padding: 5px;
+
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+}
+
+.aside_quotes label:hover, .aside_quotes label:active {
+    opacity: .7;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.quotes_container {
+    display: none;
+    margin-top: 15px;
+    padding: 10px;
+    
+    box-shadow: 5px 5px 100px black;
+    border-radius: 25px
+}
+
+input[type=checkbox]:checked ~ .quotes_container {
+    display: block;
+}
+
+.quote {
+    margin: 10px auto;
+    padding: 10px;
+
+    border-radius: 25px;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    box-shadow: 0 0 7px var(--dark-blue);
+}
+
+.quote:hover, .quote:active {
+    opacity: .7;
+}
+
+/* --------------->>> FLIPPING CARD <<<--------------- */
+
+.flipping-card {
+    position: relative;
+    max-width: clamp(300px, 50%, 380px);
+    margin: 50px auto;
+
+    background-color: transparent;
+    background-image: radial-gradient(var(--medium-blue), transparent);
+    border-radius: 10px;
+}
+
+.card_front, .card_back {
+    backface-visibility: hidden;
+
+    color: var(--light-blue);
+    background-image: linear-gradient(transparent, var(--dark-blue));
+    border-radius: 30px;
+}
+
+.card_front {
+    transform: perspective(900px) rotateY(0deg);
+}
+
+.flipping-card:hover .card_front, .flipping-card:active .card_front {
+    transform: perspective(900px) rotateY(180deg);
+
+    transition: transform 1.5s;
+}
+
+.flipping-card:hover .card_back, .flipping-card:active .card_back {
+    transform: perspective(900px) rotateY(360deg);
+
+    transition: transform 1.5s;
+}
+
+/* --------------->>> CARD-FONT <<<--------------- */
+
+.card_img {
+    overflow: hidden;
+}
+
+.card_img img {
+    max-width: 100%;
+    border-radius: 30px 30px 0 0;
+}
+
+.card_data {
+    padding: 12px;
+    font-size: 1em;
+}
+
+.card_data span {
+    font-weight: bold;
+}
+
+/* --------------->>> CARD-BACK <<<--------------- */
+
+.card_back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+
+    transform: perspective(900px) rotateY(180deg);
+}
+
+.card_back h2 {
+    margin: 0 0 5px 23px;
+    font-size: 1em;
+}
+
+.skill_container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    gap: 10px;
+    
+    font-size: 0.9em;
+    list-style: none;
+}
+
+.skill-box {
+    width: 60%;
+    padding: 7px;
+
+    color: var(--dark-blue);
+    font-size: 0.7em;
+    border: 2px solid var(--light-blue);
+    border-radius: 9px;
+}
+
+.skill_box-bar {
+    padding: 6px;
+
+    background-color: var(--light-blue);
+    border-radius: 6px;
+}
+
+.bar-95 {
+    width: 85%;
+}
+
+.bar-92 {
+    width: 80%;
+}
+
+.bar-82 {
+    width: 77%;
+}
+
+.bar-79 {
+    width: 72%;
+}
+
+.bar-100 {
+    width: 92%;
+}
+
+/* --------------->>> MUSIC SECTION <<<--------------- */
+
+.music_section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.music_section audio {
+    filter: drop-shadow(0 0  40px var(--medium-blue));
+
+    transition: filter 1s;
+}
+
+audio:hover, audio:active {
+    filter: drop-shadow(0 0 40px black);
+}
+
+/* --------------->>> GALLERY SECTION <<<--------------- */
+
+.gallery_container {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+    max-width: 650px;
+    margin: auto;
+    padding: 0 20px 40px 20px;
+}
+
+.image_container:nth-child(11n+1) {
+    grid-column: span 1;
+}
+
+.image_container:nth-child(11n+4) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.image_container:nth-child(11n+6) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.image_container:nth-child(11n+7) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.image_container:nth-child(11n+9) {
+    grid-row: span 2;
+    
+}
+
+.image_container .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+    opacity: .9;
+
+    transition: opacity 0.7s, outline 0.5s;
+}
+
+.image_container .image:hover, .image:active {
+    opacity: 0.4;
+    outline: 7px solid var(--dark-blue);
+}
