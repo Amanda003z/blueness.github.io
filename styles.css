@@ -26,78 +26,33 @@ body {
     background-repeat: no-repeat;
 }
 
-/* --------------->>> CURIOSITIES SECTION <<<--------------- */
+/* --------------->>> MAIN SECTION <<<--------------- */
+/* --------------->>> QUOTE SECTION <<<--------------- */
 
-.aside_curiosities {
-    z-index: 10;
-    width: 55dvw;
-    max-width: 400px;
+.quote_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    position: sticky;
-    top: 10px;
-}
-
-.aside_curiosities .button {
-    margin-left: 10px;
-}
-
-.aside_curiosities img {
+    width: 90dvw;
+    max-width: 800px;
+    margin: 30px auto;
     padding: 7px;
-    width: 40px;
 
     background-image: linear-gradient(transparent 40%, var(--dark-blue));
     border-radius: 20px;
-    box-shadow: 0 0 4px black;
 }
 
-.aside_curiosities img:hover, .aside_curiosities img:active {
-    box-shadow: 0 0 4px var(--medium-blue);
+.quote_container  img {
+    position: cover;
+    margin: 0 20px;
+    width: 10dvw;
+    max-width: 40px;
 }
 
-input[type=checkbox] {
-    display: none;
-}
-
-.curiosities_container {
-    display: none;
-    position: absolute;
-    z-index: 10;
-    
-    width: 55dvw;
-    height: 85dvh;
-    padding: 10px;
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: var(--light-blue) var(--dark-blue);
-    
-    box-shadow: 5px 5px 100px black;
-    border-radius: 25px
-}
-
-input[type=checkbox]:checked ~ .curiosities_container {
-    display: block;
-}
-
-.curiosity {
-    margin: 10px auto;
-    padding: 10px;
-
-    border-radius: 25px;
-    color: var(--dark-blue);
-    background-color: var(--light-blue);
-    box-shadow: 0 0 7px var(--dark-blue);
-}
-
-.curiosity:hover, .curiosity:active {
-    opacity: .7;
-}
-
-/* --------------->>> CURIOSITIES QUERIES <<<--------------- */
-
-@media screen and (min-width: 600px) {
-    .aside_curiosities img {
-        width: 60px;
-    }
+.quote_container p {
+    font-size: 1rem;
+    color: var(--light-blue);
 }
 
 /* --------------->>> FLIPPING CARD <<<--------------- */
@@ -207,23 +162,23 @@ input[type=checkbox]:checked ~ .curiosities_container {
 }
 
 .bar-95 {
-    width: 85%;
+    width: 90%;
 }
 
 .bar-92 {
-    width: 80%;
+    width: 87%;
 }
 
-.bar-82 {
-    width: 77%;
+.bar-84 {
+    width: 79%;
 }
 
-.bar-79 {
-    width: 72%;
+.bar-85 {
+    width: 82%;
 }
 
 .bar-100 {
-    width: 92%;
+    width: 95%;
 }
 
 /* --------------->>> MUSIC SECTION <<<--------------- */
@@ -259,6 +214,24 @@ audio:hover, audio:active {
     max-width: 800px;
     margin: auto;
     padding: 0 20px 40px 20px;
+}
+
+.image_container {
+    position: relative;
+    display: flex;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--medium-blue);
+    font-weight: bold;
+}
+
+.image_container span {
+    position: absolute;
+
+    padding: 0 5px;
 }
 
 .image_container img {
@@ -300,7 +273,7 @@ audio:hover, audio:active {
 }
 
 .image_container .image:hover, .image:active {
-    opacity: 0.4;
+    opacity: 0.2;
     outline: 7px solid var(--dark-blue);
 }
 
@@ -338,7 +311,7 @@ audio:hover, audio:active {
 /* --------------->>> FOOTER SECTION <<<--------------- */
 
 .footer {
-    padding: 20px;
+    padding: 30px;
 
     background-image: linear-gradient(transparent, #000d);
 }
@@ -346,5 +319,6 @@ audio:hover, audio:active {
 .footer h2 {
     text-align: right;
     font-size: 1.2em;
+
     color: var(--light-blue);
 }
