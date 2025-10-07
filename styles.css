@@ -39,11 +39,11 @@ body {
     margin: 30px auto;
     padding: 7px;
 
-    background-image: linear-gradient(transparent 40%, var(--dark-blue));
+    background-image: linear-gradient(var(--dark-blue), transparent 40%);
     border-radius: 20px;
 }
 
-.quote_container  img {
+.quote_container img {
     position: cover;
     margin: 0 20px;
     width: 10dvw;
@@ -66,7 +66,6 @@ body {
     background-color: transparent;
     background-image: radial-gradient(var(--medium-blue), transparent);
     border-radius: 10px;
-    filter: drop-shadow(0 0 3px black);
 }
 
 .card_front, .card_back {
@@ -161,24 +160,8 @@ body {
     border-radius: 6px;
 }
 
-.bar-95 {
-    width: 90%;
-}
-
-.bar-92 {
-    width: 87%;
-}
-
-.bar-84 {
-    width: 79%;
-}
-
-.bar-85 {
-    width: 82%;
-}
-
 .bar-100 {
-    width: 95%;
+    width: 98%;
 }
 
 /* --------------->>> MUSIC SECTION <<<--------------- */
@@ -211,9 +194,9 @@ audio:hover, audio:active {
     grid-template-columns: repeat(2, 1fr);
 
     gap: 15px;
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
-    padding: 0 20px 40px 20px;
+    padding: 0 45px 40px 45px;
 }
 
 .image_container {
@@ -312,8 +295,6 @@ audio:hover, audio:active {
 
 .footer {
     padding: 30px;
-
-    background-image: linear-gradient(transparent, #000d);
 }
 
 .footer h2 {
